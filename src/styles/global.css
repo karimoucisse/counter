@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    background-color: rgb(223, 209, 190);
+    /* background-color: rgb(223, 209, 190); */
 }
 #root {
     display: flex;
@@ -13,5 +13,5 @@ body {
     box-shadow: 4px 4px 8px black;
     height: 250px;
     border-radius: 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
 }

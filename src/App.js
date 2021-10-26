@@ -8,18 +8,41 @@ class App extends React.Component {
     super()
 
     this.state = {
-      number: 0
+      number: 0,
+      number2 : 0
     }
 
   }
   handleMinusClick = () => {
     if(this.state.number>0) {
-      this.setState ( {number : this.state.number - 1} )
+      this.setState ( {number : this.state.number - 1,} )
     }
   }
   handlePlusClick = () => {
-    this.setState ( {number : this.state.number + 1} )
+    if(this.state.number<100) {
+      this.setState ( {number : this.state.number + 1} )
+      if(this.state.number === this.state.number2){
+        this.setState ( {number2 : this.state.number + 2} )
+      }
+    }    
+    
+
   }
+  handleMinusClick2 = () => {
+    if(this.state.number2>0) {
+      this.setState ( {number2 : this.state.number2 - 1,} )
+      if(this.state.number === this.state.number2){
+        this.setState ( {number : this.state.number2 - 2} )
+      }
+    }
+    
+  }
+  handlePlusClick2 = () => {
+    if(this.state.number2<100) {
+      this.setState ( {number2 : this.state.number2 + 1} )
+    }
+  }
+  
 
  render() {
   return (
@@ -27,7 +50,13 @@ class App extends React.Component {
       <div className="row text-center">
         <h1 className="col">Counter</h1>
       </div>
-      <Counter count = {this.state.number} substract = {this.handleMinusClick} increment ={this.handlePlusClick}/>
+      <div className="row justify-content-around" >
+        <Counter count = {this.state.number} substract = {this.handleMinusClick} 
+          increment ={this.handlePlusClick}  count2 = {this.state.number2} 
+          substract2= {this.handleMinusClick2} 
+          increment2 ={this.handlePlusClick2}>
+        </Counter>
+      </div>
     </div>
   )
 
