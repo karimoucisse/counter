@@ -10,9 +10,9 @@ class Counter extends React.Component {
                 <h2 className="col-2 text-center">{this.props.count}</h2>
                 <Button variant="success" onClick={this.props.increment} className="col-2 text-center">+</Button>
 
-                <Button variant="danger" onClick={this.props.substract2} className="col-2 text-center">-</Button>
+                {/* <Button variant="danger" onClick={this.props.substract2} className="col-2 text-center">-</Button>
                 <h2 className="col-2 text-center">{this.props.count2}</h2>
-                <Button variant="success" onClick={this.props.increment2} className="col-2 text-center">+</Button>
+                <Button variant="success" onClick={this.props.increment2} className="col-2 text-center">+</Button> */}
             </>
         )
     }

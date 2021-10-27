@@ -52,9 +52,11 @@ class App extends React.Component {
       </div>
       <div className="row justify-content-around" >
         <Counter count = {this.state.number} substract = {this.handleMinusClick} 
-          increment ={this.handlePlusClick}  count2 = {this.state.number2} 
-          substract2= {this.handleMinusClick2} 
-          increment2 ={this.handlePlusClick2}>
+          increment ={this.handlePlusClick}  >
+        </Counter>
+        <Counter  count = {this.state.number2} 
+          substract= {this.handleMinusClick2} 
+          increment ={this.handlePlusClick2}>
         </Counter>
       </div>
     </div>
