@@ -28,20 +28,6 @@ class App extends React.Component {
     
 
   }
-  handleMinusClick2 = () => {
-    if(this.state.number2>0) {
-      this.setState ( {number2 : this.state.number2 - 1,} )
-      if(this.state.number === this.state.number2){
-        this.setState ( {number : this.state.number2 - 2} )
-      }
-    }
-    
-  }
-  handlePlusClick2 = () => {
-    if(this.state.number2<100) {
-      this.setState ( {number2 : this.state.number2 + 1} )
-    }
-  }
   
 
  render() {
